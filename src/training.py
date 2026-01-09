@@ -21,7 +21,7 @@ ALPHA = 0.1 # Only used for Lasso/Ridge
 # 1. Load Data
 # ---------------------------------------------------------
 # Ensure data folder exists or adjust path as necessary
-df = pd.read_csv('.data/winequality-red.csv', sep=';')
+df = pd.read_csv('../data/winequality-red.csv', sep=';')
 
 X = df.drop('quality', axis=1)
 y = df['quality']
@@ -65,10 +65,10 @@ print(f"R2: {r2:.4f}")
 # ---------------------------------------------------------
 # 5. Save Artifacts (Model & Metrics)
 # ---------------------------------------------------------
-os.makedirs('models', exist_ok=True)
+os.makedirs('../models', exist_ok=True)
 
 # Save Model
-joblib.dump(model, 'models/model.pkl')
+joblib.dump(model, '../models/model.pkl')
 
 # Save Metrics to JSON
 metrics = {
@@ -81,7 +81,7 @@ metrics = {
     }
 }
 
-with open('models/metrics.json', 'w') as f:
+with open('../models/metrics.json', 'w') as f:
     json.dump(metrics, f, indent=4)
 
 # ---------------------------------------------------------
@@ -105,5 +105,5 @@ summary_content = f"""
 - **Alpha:** {ALPHA}
 """
 
-with open('models/summary_report.md', 'w') as f:
+with open('../models/summary_report.md', 'w') as f:
     f.write(summary_content)

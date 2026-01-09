@@ -7,9 +7,9 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error, r2_score
 
 # Configuration
-DATA_PATH = "./data/winequality-red.csv"
-MODEL_SAVE_PATH = ".outputs/model.joblib"
-METRICS_SAVE_PATH = ".outputs/metrics.json"
+DATA_PATH = "../data/winequality-red.csv"
+MODEL_SAVE_PATH = "../outputs/model.joblib"
+METRICS_SAVE_PATH = "../outputs/metrics.json"
 RANDOM_STATE = 42
 
 def load_data(filepath):
