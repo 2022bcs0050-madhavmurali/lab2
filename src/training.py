@@ -14,10 +14,10 @@ STUDENT_NAME = "Madhav Murali"
 ROLL_NUMBER = "2022BCS0050"
 
 # Experiment settings
-TEST_SIZE = 0.2
+TEST_SIZE = 0.3
 RANDOM_STATE = 42
-MODEL_TYPE = "Ridge"  # Options: "LinearRegression", "Lasso", "Ridge"
-ALPHA = 0.5 # Only used for Lasso/Ridge
+MODEL_TYPE = "LinearRegression"  # Options: "LinearRegression", "Lasso", "Ridge"
+ALPHA = 0.2 # Only used for Lasso/Ridge
 
 # ---------------------------------------------------------
 # 1. Path Setup & Data Loading
