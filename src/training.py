@@ -17,7 +17,7 @@ ROLL_NUMBER = "2022BCS0050"
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
 MODEL_TYPE = "Ridge"  # Options: "LinearRegression", "Lasso", "Ridge"
-ALPHA = 0.1 # Only used for Lasso/Ridge
+ALPHA = 0.5 # Only used for Lasso/Ridge
 
 # ---------------------------------------------------------
 # 1. Path Setup & Data Loading
