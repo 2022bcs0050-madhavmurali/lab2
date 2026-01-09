@@ -20,8 +20,17 @@ ALPHA = 0.1 # Only used for Lasso/Ridge
 # ---------------------------------------------------------
 # 1. Load Data
 # ---------------------------------------------------------
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the path to the data file relative to this script
+# Go up one level (..) to root, then down into data/
+data_path = os.path.join(current_dir, '..', 'data', 'winequality-red.csv')
+
+print(f"Loading data from: {data_path}") # Debug print to verify path
+
+df = pd.read_csv(data_path, sep=';')
 # Ensure data folder exists or adjust path as necessary
-df = pd.read_csv('../data/winequality-red.csv', sep=';')
+# df = pd.read_csv('../data/winequality-red.csv', sep=';')
 
 X = df.drop('quality', axis=1)
 y = df['quality']
